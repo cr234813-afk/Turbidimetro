@@ -1,0 +1,9 @@
+void setup() {
+  Serial.begin(9600); // Rango de baudios: 9600
+}
+void loop() {
+  int sensorValue = analogRead(A1);// Leemos la entrada analogica del pin 0:
+  float voltage = sensorValue * (5.0 / 1023.0); // Convertimos la rectura analogica (esta varia de 0 - 1023) este sera nuestro voltaje en el rango (0 - 5V):
+  Serial.println(voltage); // imprimimos el valor de salida leído:
+  delay(500);
+}
